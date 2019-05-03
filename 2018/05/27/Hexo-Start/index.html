@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="飞逸">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-27T15:43:36.000Z">
+<meta property="og:updated_time" content="2018-05-30T04:31:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Start">
 <meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
@@ -211,22 +211,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
           </a>
         </li>
       
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-27T23:43:36+08:00">
-                2018-05-27
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-30T12:31:36+08:00">
+                2018-05-30
               </time>
             
           </span>
@@ -339,6 +339,17 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/ReadMe/" itemprop="url" rel="index">
                     <span itemprop="name">ReadMe</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ReadMe/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
                   </a>
                 </span>
 
@@ -376,7 +387,7 @@
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start "></a><font color="green" size="20">Quick Start </font></h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line"><span class="comment"># 缩写</span></span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
@@ -384,18 +395,16 @@
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line"><span class="comment"># 缩写</span></span><br><span class="line">$ hexo d</span><br><span class="line"><span class="comment"># 可以一个命令生成部署</span></span><br><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<h3 id="色块"><a href="#色块" class="headerlink" title="色块"></a>色块</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note class_name %&#125; Content (md partial supported) &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="色块"><a href="#色块" class="headerlink" title="色块"></a>色块</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note class_name %&#125; </span><br><span class="line">    Content (md partial supported) </span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"><span class="comment">&lt;!--对反引号包裹的代码无效--&gt;</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>class_name是以下列表的一个值<blockquote>
-<ul>
+<li>class_name是以下列表的一个值<div class="note info"><ul>
 <li>default</li>
 <li>primary</li>
 <li>success</li>
 <li>info</li>
 <li>warning</li>
 <li>danger</li>
-</ul>
-</blockquote>
+</ul></div>
 </li>
 </ul>
 <div class="note default"><p>default </p></div>
@@ -404,7 +413,17 @@
 <div class="note info"><p>info </p></div>
 <div class="note warning"><p>warning </p></div>
 <div class="note danger"><p>danger </p></div>
-<h2 id="坑：hexo-deployer-git"><a href="#坑：hexo-deployer-git" class="headerlink" title="坑：hexo-deployer-git"></a>坑：hexo-deployer-git</h2><h3 id="taobao源的坑"><a href="#taobao源的坑" class="headerlink" title="taobao源的坑"></a>taobao源的坑</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br><span class="line">npm ERR! code EINVALIDPACKAGENAME</span><br><span class="line">npm ERR! Invalid <span class="keyword">package</span> <span class="keyword">name</span> <span class="string">"git+git"</span>: <span class="keyword">name</span> can <span class="keyword">only</span> contain <span class="keyword">URL</span>-friendly <span class="keyword">characters</span></span><br><span class="line">npm ERR! A <span class="keyword">complete</span> <span class="keyword">log</span> <span class="keyword">of</span> this run can be <span class="keyword">found</span> <span class="keyword">in</span>:</span><br><span class="line">npm ERR!     C:\<span class="keyword">Users</span>\Administrator\AppData\Roaming\npm-<span class="keyword">cache</span>\_logs\<span class="number">2018</span><span class="number">-05</span><span class="number">-27</span>T08_19_40_456Z-debug.log</span><br></pre></td></tr></table></figure>
+<h3 id="Task-Lists"><a href="#Task-Lists" class="headerlink" title="Task Lists"></a>Task Lists</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>[<span class="string">x</span>] @mentions, #refs, [<span class="string">links</span>](<span class="link"></span>), <span class="strong">**formatting**</span>, and <span class="xml"><span class="tag">&lt;<span class="name">del</span>&gt;</span></span>tags<span class="xml"><span class="tag">&lt;/<span class="name">del</span>&gt;</span></span> supported</span><br><span class="line"><span class="bullet">- </span>[x] list syntax required (any unordered or ordered list supported)</span><br><span class="line"><span class="bullet">- </span>[x] this is a complete item</span><br><span class="line"><span class="bullet">- </span>[ ] this is an incomplete item</span><br></pre></td></tr></table></figure>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> @mentions, #refs, <a href="">links</a>, <strong>formatting</strong>, and <del>tags</del> supported</li>
+<li style="list-style: none"><input type="checkbox" checked> list syntax required (any unordered or ordered list supported)</li>
+<li style="list-style: none"><input type="checkbox" checked> this is a complete item</li>
+<li style="list-style: none"><input type="checkbox"> this is an incomplete item</li>
+</ul>
+<h3 id="Font-color-and-size"><a href="#Font-color-and-size" class="headerlink" title="Font color and size"></a>Font color and size</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"source code pro"</span>&gt;</span>I am font<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"微软雅黑"</span>&gt;</span>I am font<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"STCAIYUN"</span>&gt;</span>我是华文彩云<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#0099ff</span> <span class="attr">size</span>=<span class="string">12</span> <span class="attr">face</span>=<span class="string">"黑体"</span>&gt;</span>黑体<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#00ffff</span> <span class="attr">size</span>=<span class="string">3</span>&gt;</span>null<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">gray</span> <span class="attr">size</span>=<span class="string">5</span>&gt;</span>gray<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--常用字体--&gt;</span></span><br><span class="line">"Consolas"</span><br><span class="line">"DejaVu Sans Mono"</span><br><span class="line">"Microsoft YaHei Mono"</span><br><span class="line">"YaHei Consolas Hybrid"</span><br><span class="line">"YaHei Monaco Hybird"</span><br><span class="line">"Source Code Pro"</span><br></pre></td></tr></table></figure>
+<font face="Consolas">abcdefghijklmnopqrstuvwxyz0123456789 “Consolas” </font><br><font face="DejaVu Sans Mono">abcdefghijklmnopqrstuvwxyz0123456789  “DejaVu Sans Mono” </font><br><font face="Microsoft YaHei Mono">abcdefghijklmnopqrstuvwxyz0123456789  “Microsoft YaHei Mono” </font><br><font face="YaHei Consolas Hybrid">abcdefghijklmnopqrstuvwxyz0123456789  “YaHei Consolas Hybrid” </font><br><font face="YaHei Monaco Hybird">abcdefghijklmnopqrstuvwxyz0123456789  “YaHei Monaco Hybird” </font><br><font face="Source Code Pro">abcdefghijklmnopqrstuvwxyz0123456789  “Source Code Pro” </font><br><font color="#00ffff" size="3">null</font><br><font color="gray" size="5">gray</font>
+
+<h2 id="坑：hexo-deployer-git"><a href="#坑：hexo-deployer-git" class="headerlink" title="坑：hexo-deployer-git"></a>坑：hexo-deployer-git</h2><h3 id="taobao源的坑"><a href="#taobao源的坑" class="headerlink" title="taobao源的坑"></a>taobao源的坑</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br><span class="line">npm ERR! Unexpected <span class="keyword">end</span> <span class="keyword">of</span> <span class="keyword">JSON</span> <span class="keyword">input</span> <span class="keyword">while</span> parsing near <span class="string">'..."eslint":"^4.1.0","es'</span></span><br><span class="line">npm ERR!     C:\<span class="keyword">Users</span>\Administrator\AppData\Roaming\npm-<span class="keyword">cache</span>\_logs\<span class="number">2018</span><span class="number">-05</span><span class="number">-27</span>T08_19_40_456Z-debug.log</span><br></pre></td></tr></table></figure>
 <h3 id="更换源"><a href="#更换源" class="headerlink" title="更换源"></a>更换源</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">$</span> <span class="string">npm</span> <span class="string">install</span> <span class="bullet">-g</span> <span class="string">nrm</span></span><br><span class="line"><span class="string">$</span> <span class="string">nrm</span> <span class="string">ls</span></span><br><span class="line"></span><br><span class="line">  <span class="string">npm</span> <span class="bullet">----</span> <span class="attr">https://registry.npmjs.org/</span></span><br><span class="line">  <span class="string">cnpm</span> <span class="meta">---</span> <span class="attr">http://r.cnpmjs.org/</span></span><br><span class="line"><span class="string">*</span> <span class="string">taobao</span> <span class="bullet">-</span> <span class="attr">https://registry.npm.taobao.org/</span></span><br><span class="line">  <span class="string">nj</span> <span class="bullet">-----</span> <span class="attr">https://registry.nodejitsu.com/</span></span><br><span class="line">  <span class="string">rednpm</span> <span class="bullet">-</span> <span class="attr">http://registry.mirror.cqupt.edu.cn/</span></span><br><span class="line">  <span class="string">npmMirror</span>  <span class="attr">https://skimdb.npmjs.com/registry/</span></span><br><span class="line">  <span class="string">edunpm</span> <span class="bullet">-</span> <span class="attr">http://registry.enpmjs.org/</span></span><br><span class="line"><span class="string">$</span> <span class="string">nrm</span> <span class="string">use</span> <span class="string">cnpm</span></span><br><span class="line"></span><br><span class="line">   <span class="string">Registry</span> <span class="string">has</span> <span class="string">been</span> <span class="string">set</span> <span class="attr">to:</span> <span class="attr">http://r.cnpmjs.org/</span></span><br></pre></td></tr></table></figure>
 <h3 id="在对应的文件夹下安装"><a href="#在对应的文件夹下安装" class="headerlink" title="在对应的文件夹下安装"></a>在对应的文件夹下安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-deployer-git --save</span></span><br></pre></td></tr></table></figure>
 
@@ -443,8 +462,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/28/Offer/" rel="prev" title="Target Offer-19">
-                Target Offer-19 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/28/Offer/" rel="prev" title="剑指Offer面试题18:树的子结构">
+                剑指Offer面试题18:树的子结构 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -522,7 +541,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -533,7 +552,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -544,7 +563,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -593,7 +612,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#色块"><span class="nav-number">1.5.</span> <span class="nav-text">色块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#坑：hexo-deployer-git"><span class="nav-number">2.</span> <span class="nav-text">坑：hexo-deployer-git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#taobao源的坑"><span class="nav-number">2.1.</span> <span class="nav-text">taobao源的坑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换源"><span class="nav-number">2.2.</span> <span class="nav-text">更换源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在对应的文件夹下安装"><span class="nav-number">2.3.</span> <span class="nav-text">在对应的文件夹下安装</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#色块"><span class="nav-number">1.5.</span> <span class="nav-text">色块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-Lists"><span class="nav-number">1.6.</span> <span class="nav-text">Task Lists</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Font-color-and-size"><span class="nav-number">1.7.</span> <span class="nav-text">Font color and size</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#坑：hexo-deployer-git"><span class="nav-number">2.</span> <span class="nav-text">坑：hexo-deployer-git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#taobao源的坑"><span class="nav-number">2.1.</span> <span class="nav-text">taobao源的坑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换源"><span class="nav-number">2.2.</span> <span class="nav-text">更换源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在对应的文件夹下安装"><span class="nav-number">2.3.</span> <span class="nav-text">在对应的文件夹下安装</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -613,7 +632,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
