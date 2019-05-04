@@ -96,13 +96,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="已宁">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="参考内容： https://segmentfault.com/a/1190000013132249#articleHeader3            字典的原理 字典、哈希表、散列表其实是同一种数据结构，名称不同。   数组的取值是 O(1)，但是插入删除一个元素是 O(N)。 有什么办法在增删一个元素的时间复杂度是 O(1)，或者接近 O(1) 原始数据key = v">
+<meta name="keywords" content="数据类型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavsScript字典的实现">
+<meta property="og:url" content="http://yoursite.com/2019/05/04/JavsScript字典的实现/index.html">
 <meta property="og:site_name" content="已宁">
+<meta property="og:description" content="参考内容： https://segmentfault.com/a/1190000013132249#articleHeader3            字典的原理 字典、哈希表、散列表其实是同一种数据结构，名称不同。   数组的取值是 O(1)，但是插入删除一个元素是 O(N)。 有什么办法在增删一个元素的时间复杂度是 O(1)，或者接近 O(1) 原始数据key = v">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-04T02:26:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="已宁">
+<meta name="twitter:title" content="JavsScript字典的实现">
+<meta name="twitter:description" content="参考内容： https://segmentfault.com/a/1190000013132249#articleHeader3            字典的原理 字典、哈希表、散列表其实是同一种数据结构，名称不同。   数组的取值是 O(1)，但是插入删除一个元素是 O(N)。 有什么办法在增删一个元素的时间复杂度是 O(1)，或者接近 O(1) 原始数据key = v">
 
 
 
@@ -110,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/05/04/JavsScript字典的实现/"/>
 
 
 
@@ -120,7 +125,7 @@
   };
 </script>
 
-  <title>已宁</title>
+  <title>JavsScript字典的实现 | 已宁</title>
   
 
 
@@ -168,8 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -211,7 +215,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -307,9 +311,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -341,10 +345,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/04/JavsScript字典的实现/" class="post-title-link" itemprop="url">JavsScript字典的实现</a>
+          <h1 class="post-title" itemprop="name headline">JavsScript字典的实现
+
               
             
           </h1>
@@ -422,9 +424,7 @@
       
 
       
-        
-          
-            <div class="note info">
+        <div class="note info">
             <p>参考内容： <a href="https://segmentfault.com/a/1190000013132249#articleHeader3" target="_blank" rel="noopener">https://segmentfault.com/a/1190000013132249#articleHeader3</a></p>
           </div>
 <h2 id="字典的原理"><a href="#字典的原理" class="headerlink" title="字典的原理"></a>字典的原理</h2><blockquote>
@@ -444,8 +444,6 @@
 <h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 链表的结点</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(key, value) &#123;</span><br><span class="line">        <span class="keyword">this</span>.key = key</span><br><span class="line">        <span class="keyword">this</span>.value = value</span><br><span class="line">        <span class="keyword">this</span>.next = <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 链表</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LinkedList</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>() &#123;</span><br><span class="line">        <span class="comment">// new 的时候 第一个结点为 undefined</span></span><br><span class="line">        <span class="keyword">this</span>.head = <span class="keyword">new</span> Node()</span><br><span class="line">        <span class="keyword">this</span>.length = <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// update append</span></span><br><span class="line">    update(key, value) &#123;</span><br><span class="line">        <span class="keyword">var</span> flag = <span class="literal">true</span></span><br><span class="line">        <span class="keyword">var</span> node = <span class="keyword">this</span>.head</span><br><span class="line">        <span class="keyword">while</span>(node.next != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (node.key === key) &#123;</span><br><span class="line">                node.value = value</span><br><span class="line">                flag = <span class="literal">false</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            &#125;</span><br><span class="line">            node = node.next</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">            <span class="keyword">var</span> n = <span class="keyword">new</span> Node(key, value)</span><br><span class="line">            node.next = n</span><br><span class="line">            <span class="keyword">this</span>.length++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    get(key) &#123;</span><br><span class="line">        <span class="keyword">var</span> node = <span class="keyword">this</span>.head</span><br><span class="line">        <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span>(index &lt;= <span class="keyword">this</span>.length) &#123;</span><br><span class="line">            <span class="keyword">if</span> (node.key === key) &#123;</span><br><span class="line">                <span class="keyword">return</span> node.value</span><br><span class="line">            &#125;</span><br><span class="line">            index++</span><br><span class="line">            node = node.next</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    remove(key) &#123;</span><br><span class="line">        <span class="keyword">var</span> node = <span class="keyword">this</span>.head</span><br><span class="line">        <span class="keyword">var</span> previous</span><br><span class="line">        <span class="keyword">while</span>(node.next != <span class="literal">null</span>) &#123;</span><br><span class="line">            previous = node</span><br><span class="line">            node = node.next</span><br><span class="line">            log(previous, node)</span><br><span class="line">            <span class="keyword">if</span> (node.key === key) &#123;</span><br><span class="line">                previous.next = node.next</span><br><span class="line">                <span class="keyword">this</span>.length--</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="字典的实现"><a href="#字典的实现" class="headerlink" title="字典的实现"></a>字典的实现</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dict</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(num = 31) &#123;</span><br><span class="line">        <span class="comment">// 知道填充的数量是最好的</span></span><br><span class="line">        <span class="keyword">var</span> prime = <span class="keyword">new</span> Prime()</span><br><span class="line">        <span class="keyword">this</span>.num = prime.near(num / <span class="number">0.75</span>)</span><br><span class="line">        <span class="keyword">this</span>.list = []</span><br><span class="line">    &#125;</span><br><span class="line">    hash(str, base = <span class="keyword">this</span>.num, seed = <span class="number">31</span>) &#123;</span><br><span class="line">        <span class="comment">// seed 31 131 1313 13131 131313 etc..</span></span><br><span class="line">        <span class="keyword">var</span> hash = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; str.length; i++) &#123;</span><br><span class="line">            hash = (hash * seed) + str[i].charCodeAt();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> hash % base</span><br><span class="line">    &#125;</span><br><span class="line">    update(key, value = <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> index = <span class="keyword">this</span>.hash(key)</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.list[index]) &#123;</span><br><span class="line">            <span class="keyword">this</span>.list[index].update(key, value)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.list[index] = <span class="keyword">new</span> LinkedList()</span><br><span class="line">            <span class="keyword">this</span>.list[index].update(key, value)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    get(key) &#123;</span><br><span class="line">        <span class="keyword">var</span> index = <span class="keyword">this</span>.hash(key)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.list[index].get(key)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
 
@@ -466,372 +464,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/30/Crawling-Pornhub/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ksino.H"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="/images/avatar.gif"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="已宁"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/05/30/Crawling-Pornhub/" class="post-title-link" itemprop="url">爬取Pornhub.com的视频</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-05-30 12:08:14" itemprop="dateCreated datePublished" datetime="2018-05-30T12:08:14+08:00">2018-05-30</time>
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/Scrapy/" itemprop="url" rel="index"><span itemprop="name">Scrapy</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/数据类型/" rel="tag"># 数据类型</a>
           
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <div class="note info">
-            <ol><li>纯粹好玩</li><li>请勿沉迷</li><li>需要翻墙<a href="https://www.pornhub.com" target="_blank" rel="noopener">https://www.pornhub.com</a></li><li>详情参照<a href="https://github.com/xiyouMc/WebHubBot" target="_blank" rel="noopener">https://github.com/xiyouMc/WebHubBot</a></li></ol>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/30/Crawling-Pornhub/" rel="next" title="爬取Pornhub.com的视频">
+                <i class="fa fa-chevron-left"></i> 爬取Pornhub.com的视频
+              </a>
+            
           </div>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/05/30/Crawling-Pornhub/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/28/Offer/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ksino.H"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="/images/avatar.gif"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="已宁"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/05/28/Offer/" class="post-title-link" itemprop="url">剑指Offer面试题18:树的子结构</a>
-              
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-05-28 00:16:36" itemprop="dateCreated datePublished" datetime="2018-05-28T00:16:36+08:00">2018-05-28</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-05-30 12:39:00" itemprop="dateModified" datetime="2018-05-30T12:39:00+08:00">2018-05-30</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Interview/" itemprop="url" rel="index"><span itemprop="name">Interview</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Interview/Target-offer/" itemprop="url" rel="index"><span itemprop="name">Target-offer</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h2 id="输入两棵二叉树A，B，判断B是不是A的子结构"><a href="#输入两棵二叉树A，B，判断B是不是A的子结构" class="headerlink" title="输入两棵二叉树A，B，判断B是不是A的子结构"></a>输入两棵二叉树A，B，判断B是不是A的子结构</h2>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/05/28/Offer/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -841,200 +503,15 @@
   </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/27/Hexo-Start/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ksino.H"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="/images/avatar.gif"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="已宁"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/05/27/Hexo-Start/" class="post-title-link" itemprop="url">Hexo Start</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-05-27 12:42:36" itemprop="dateCreated datePublished" datetime="2018-05-27T12:42:36+08:00">2018-05-27</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-05-30 12:31:36" itemprop="dateModified" datetime="2018-05-30T12:31:36+08:00">2018-05-30</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ReadMe/" itemprop="url" rel="index"><span itemprop="name">ReadMe</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ReadMe/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/05/27/Hexo-Start/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -1054,8 +531,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1166,6 +652,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#字典的原理"><span class="nav-number">1.</span> <span class="nav-text">字典的原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#散列值的算法"><span class="nav-number">1.1.</span> <span class="nav-text">散列值的算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链表"><span class="nav-number">1.2.</span> <span class="nav-text">链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字典的实现"><span class="nav-number">1.3.</span> <span class="nav-text">字典的实现</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1289,6 +792,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -1304,6 +811,8 @@
 
   
 
+
+  
 
 
   
