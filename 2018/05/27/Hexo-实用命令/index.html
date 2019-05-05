@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+  <meta name="description" content="Hexo 文档Hexo GitHub">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo Start">
-<meta property="og:url" content="http://yoursite.com/2018/05/27/Hexo-Start/index.html">
+<meta property="og:title" content="Hexo 实用命令">
+<meta property="og:url" content="http://yoursite.com/2018/05/27/Hexo-实用命令/index.html">
 <meta property="og:site_name" content="已宁">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta property="og:description" content="Hexo 文档Hexo GitHub">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-05-30T04:31:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo Start">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="twitter:title" content="Hexo 实用命令">
+<meta name="twitter:description" content="Hexo 文档Hexo GitHub">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2018/05/27/Hexo-Start/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/27/Hexo-实用命令/"/>
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>Hexo Start | 已宁</title>
+  <title>Hexo 实用命令 | 已宁</title>
   
 
 
@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/27/Hexo-Start/"/>
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/27/Hexo-实用命令/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ksino.H"/>
@@ -345,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo Start
+          <h1 class="post-title" itemprop="name headline">Hexo 实用命令
 
               
             
@@ -447,36 +447,41 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+        <div class="note success">
+            <ul><li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo 文档</a></li><li><a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">Hexo GitHub</a></li></ul>
+          </div>
 <a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start "></a><font color="green" size="20">Quick Start </font></h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动本地服务器，用于预览主题</span></span><br><span class="line">$ hexo server</span><br><span class="line"><span class="comment"># 缩写</span></span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始 "></a><font color="green" size="20">快速开始 </font></h2><h3 id="1-新建一篇文章"><a href="#1-新建一篇文章" class="headerlink" title="1. 新建一篇文章"></a>1. 新建一篇文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"文章名字"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/zh-cn/docs/writing" target="_blank" rel="noopener">写作</a></p>
+<ul>
+<li>首页预览每篇文章内容的多少，就由<code>&lt;!--more--&gt;</code>决定<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1 我今天吃饭</span><br><span class="line">2 我今天睡觉</span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line">3 我今天大便</span><br><span class="line"><span class="comment"># 首页只显示到第二行</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-生成静态文件"><a href="#2-生成静态文件" class="headerlink" title="2. 生成静态文件"></a>2. 生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line"><span class="comment"># 缩写</span></span><br><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+<ul>
+<li>生成网站静态文件到默认设置的 <code>public</code> 文件夹。</li>
+</ul>
+<p>More info: <a href="https://hexo.io/zh-cn/docs/generating.html" target="_blank" rel="noopener">生成器</a></p>
+<h3 id="3-预览"><a href="#3-预览" class="headerlink" title="3. 预览"></a>3. 预览</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动本地服务器，用于预览主题</span></span><br><span class="line">$ hexo server</span><br><span class="line"><span class="comment"># 缩写</span></span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 <ul>
 <li>预览的同时可以修改文章内容或主题代码，保存后刷新页面即可。</li>
 <li>对 <code>Hexo</code> 根目录<code>_config.yml</code>的修改，需要重启本地服务器后才能预览效果。</li>
 </ul>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line"><span class="comment"># 缩写</span></span><br><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
-<ul>
-<li>生成网站静态文件到默认设置的 public 文件夹。</li>
-</ul>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 清除缓存</span></span><br><span class="line">$ hexo clean</span><br><span class="line"><span class="comment"># 部署</span></span><br><span class="line">$ hexo deploy</span><br><span class="line"><span class="comment"># 缩写</span></span><br><span class="line">$ hexo d</span><br><span class="line"><span class="comment"># 可以一个命令生成部署</span></span><br><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/zh-cn/docs/server" target="_blank" rel="noopener">服务器</a></p>
+<h3 id="4-部署"><a href="#4-部署" class="headerlink" title="4. 部署"></a>4. 部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 部署</span></span><br><span class="line">$ hexo deploy</span><br><span class="line"><span class="comment"># 缩写</span></span><br><span class="line">$ hexo d</span><br><span class="line"><span class="comment"># 可以一个命令生成部署</span></span><br><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code><blockquote>
 <p>一条龙服务</p>
 </blockquote>
 </li>
 </ul>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<h3 id="色块"><a href="#色块" class="headerlink" title="色块"></a>色块</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note class_name %&#125; </span><br><span class="line">    Content (md partial supported) </span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"><span class="comment">&lt;!--对反引号包裹的代码无效--&gt;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/zh-cn/docs/deployment" target="_blank" rel="noopener">部署</a></p>
+<h3 id="5-清除缓存"><a href="#5-清除缓存" class="headerlink" title="5. 清除缓存"></a>5. 清除缓存</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
 <ul>
-<li>class_name是以下列表的一个值<div class="note info">
-            <ul><li>default</li><li>primary</li><li>success</li><li>info</li><li>warning</li><li>danger</li></ul>
-          </div>
-</li>
+<li>清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。</li>
+<li>如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令</li>
 </ul>
+<h2 id="色块"><a href="#色块" class="headerlink" title="色块"></a>色块</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--对反引号包裹的代码无效--&gt;</span></span><br><span class="line">&#123;% default %&#125;</span><br><span class="line">灰色</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% primary %&#125;</span><br><span class="line">紫色</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% success %&#125;</span><br><span class="line">绿色</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">蓝色</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% warning %&#125;</span><br><span class="line">橙色</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% danger %&#125;</span><br><span class="line">红色</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
 <div class="note default">
             <p>default </p>
           </div>
@@ -495,14 +500,14 @@
 <div class="note danger">
             <p>danger </p>
           </div>
-<h3 id="Task-Lists"><a href="#Task-Lists" class="headerlink" title="Task Lists"></a>Task Lists</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>[<span class="string">x</span>] @mentions, #refs, [<span class="string">links</span>](<span class="link"></span>), <span class="strong">**formatting**</span>, and <span class="code">`&lt;del&gt;tags&lt;/del&gt;`</span> supported</span><br><span class="line"><span class="bullet">- </span>[x] list syntax required (any unordered or ordered list supported)</span><br><span class="line"><span class="bullet">- </span>[x] this is a complete item</span><br><span class="line"><span class="bullet">- </span>[ ] this is an incomplete item</span><br></pre></td></tr></table></figure>
+<h2 id="任务清单"><a href="#任务清单" class="headerlink" title="任务清单"></a>任务清单</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>[<span class="string">x</span>] @mentions, #refs, [<span class="string">links</span>](<span class="link"></span>), <span class="strong">**formatting**</span>, and <span class="code">`&lt;del&gt;tags&lt;/del&gt;`</span> supported</span><br><span class="line"><span class="bullet">- </span>[x] list syntax required (any unordered or ordered list supported)</span><br><span class="line"><span class="bullet">- </span>[x] this is a complete item</span><br><span class="line"><span class="bullet">- </span>[ ] this is an incomplete item</span><br></pre></td></tr></table></figure>
 <ul>
 <li style="list-style: none"><input type="checkbox" checked> @mentions, #refs, <a href="">links</a>, <strong>formatting</strong>, and <code>&lt;del&gt;tags&lt;/del&gt;</code> supported</li>
 <li style="list-style: none"><input type="checkbox" checked> list syntax required (any unordered or ordered list supported)</li>
 <li style="list-style: none"><input type="checkbox" checked> this is a complete item</li>
 <li style="list-style: none"><input type="checkbox"> this is an incomplete item</li>
 </ul>
-<h3 id="Font-color-and-size"><a href="#Font-color-and-size" class="headerlink" title="Font color and size"></a>Font color and size</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"source code pro"</span>&gt;</span>I am font<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"微软雅黑"</span>&gt;</span>I am font<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"STCAIYUN"</span>&gt;</span>我是华文彩云<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#0099ff</span> <span class="attr">size</span>=<span class="string">12</span> <span class="attr">face</span>=<span class="string">"黑体"</span>&gt;</span>黑体<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#00ffff</span> <span class="attr">size</span>=<span class="string">3</span>&gt;</span>null<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">gray</span> <span class="attr">size</span>=<span class="string">5</span>&gt;</span>gray<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--常用字体--&gt;</span></span><br><span class="line">"Consolas"</span><br><span class="line">"DejaVu Sans Mono"</span><br><span class="line">"Microsoft YaHei Mono"</span><br><span class="line">"YaHei Consolas Hybrid"</span><br><span class="line">"YaHei Monaco Hybird"</span><br><span class="line">"Source Code Pro"</span><br></pre></td></tr></table></figure>
+<h2 id="字体颜色"><a href="#字体颜色" class="headerlink" title="字体颜色"></a>字体颜色</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"source code pro"</span>&gt;</span>I am font<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"微软雅黑"</span>&gt;</span>I am font<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"STCAIYUN"</span>&gt;</span>我是华文彩云<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#0099ff</span> <span class="attr">size</span>=<span class="string">12</span> <span class="attr">face</span>=<span class="string">"黑体"</span>&gt;</span>黑体<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#00ffff</span> <span class="attr">size</span>=<span class="string">3</span>&gt;</span>null<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">gray</span> <span class="attr">size</span>=<span class="string">5</span>&gt;</span>gray<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--常用字体--&gt;</span></span><br><span class="line">"Consolas"</span><br><span class="line">"DejaVu Sans Mono"</span><br><span class="line">"Microsoft YaHei Mono"</span><br><span class="line">"YaHei Consolas Hybrid"</span><br><span class="line">"YaHei Monaco Hybird"</span><br><span class="line">"Source Code Pro"</span><br></pre></td></tr></table></figure>
 <font face="Consolas">abcdefghijklmnopqrstuvwxyz0123456789 “Consolas” </font><br><font face="DejaVu Sans Mono">abcdefghijklmnopqrstuvwxyz0123456789  “DejaVu Sans Mono” </font><br><font face="Microsoft YaHei Mono">abcdefghijklmnopqrstuvwxyz0123456789  “Microsoft YaHei Mono” </font><br><font face="YaHei Consolas Hybrid">abcdefghijklmnopqrstuvwxyz0123456789  “YaHei Consolas Hybrid” </font><br><font face="YaHei Monaco Hybird">abcdefghijklmnopqrstuvwxyz0123456789  “YaHei Monaco Hybird” </font><br><font face="Source Code Pro">abcdefghijklmnopqrstuvwxyz0123456789  “Source Code Pro” </font><br><font color="#00ffff" size="3">null</font><br><font color="gray" size="5">gray</font>
 
 <h2 id="坑：hexo-deployer-git"><a href="#坑：hexo-deployer-git" class="headerlink" title="坑：hexo-deployer-git"></a>坑：hexo-deployer-git</h2><h3 id="taobao源的坑"><a href="#taobao源的坑" class="headerlink" title="taobao源的坑"></a>taobao源的坑</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br><span class="line">npm ERR! Unexpected <span class="keyword">end</span> <span class="keyword">of</span> <span class="keyword">JSON</span> <span class="keyword">input</span> <span class="keyword">while</span> parsing near <span class="string">'..."eslint":"^4.1.0","es'</span></span><br><span class="line">npm ERR!     C:\<span class="keyword">Users</span>\Administrator\AppData\Roaming\npm-<span class="keyword">cache</span>\_logs\<span class="number">2018</span><span class="number">-05</span><span class="number">-27</span>T08_19_40_456Z-debug.log</span><br></pre></td></tr></table></figure>
@@ -728,7 +733,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#色块"><span class="nav-number">1.5.</span> <span class="nav-text">色块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-Lists"><span class="nav-number">1.6.</span> <span class="nav-text">Task Lists</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Font-color-and-size"><span class="nav-number">1.7.</span> <span class="nav-text">Font color and size</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#坑：hexo-deployer-git"><span class="nav-number">2.</span> <span class="nav-text">坑：hexo-deployer-git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#taobao源的坑"><span class="nav-number">2.1.</span> <span class="nav-text">taobao源的坑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换源"><span class="nav-number">2.2.</span> <span class="nav-text">更换源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在对应的文件夹下安装"><span class="nav-number">2.3.</span> <span class="nav-text">在对应的文件夹下安装</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#快速开始"><span class="nav-number">1.</span> <span class="nav-text">快速开始 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-新建一篇文章"><span class="nav-number">1.1.</span> <span class="nav-text">1. 新建一篇文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-生成静态文件"><span class="nav-number">1.2.</span> <span class="nav-text">2. 生成静态文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-预览"><span class="nav-number">1.3.</span> <span class="nav-text">3. 预览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-部署"><span class="nav-number">1.4.</span> <span class="nav-text">4. 部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-清除缓存"><span class="nav-number">1.5.</span> <span class="nav-text">5. 清除缓存</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#色块"><span class="nav-number">2.</span> <span class="nav-text">色块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务清单"><span class="nav-number">3.</span> <span class="nav-text">任务清单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字体颜色"><span class="nav-number">4.</span> <span class="nav-text">字体颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#坑：hexo-deployer-git"><span class="nav-number">5.</span> <span class="nav-text">坑：hexo-deployer-git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#taobao源的坑"><span class="nav-number">5.1.</span> <span class="nav-text">taobao源的坑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换源"><span class="nav-number">5.2.</span> <span class="nav-text">更换源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在对应的文件夹下安装"><span class="nav-number">5.3.</span> <span class="nav-text">在对应的文件夹下安装</span></a></li></ol></li></ol></div>
             
 
           </div>
