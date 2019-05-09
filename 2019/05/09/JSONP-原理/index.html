@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="JSONP 的原理为了克服跨域问题，利用没有跨域限制的 script 标签动态加载，将响应数据作为参数传递给预设的 callback 函数。&amp;lt;script src=&amp;quot;https://api.asilu.com/images/baidu/?callback=cb&amp;quot;&amp;gt;请求 https://api.asilu.com/images/baidu/">
+  <meta name="description" content="为了克服跨域问题，利用没有跨域限制的 script 标签动态加载，将响应数据作为参数传递给预设的 callback 函数。&amp;lt;script src=&amp;quot;https://api.asilu.com/images/baidu/?callback=cb&amp;quot;&amp;gt;请求 https://api.asilu.com/images/baidu/ ，将返回的数据 d">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JSONP 的原理">
 <meta property="og:url" content="http://yoursite.com/2019/05/09/JSONP-原理/index.html">
 <meta property="og:site_name" content="已宁">
-<meta property="og:description" content="JSONP 的原理为了克服跨域问题，利用没有跨域限制的 script 标签动态加载，将响应数据作为参数传递给预设的 callback 函数。&amp;lt;script src=&amp;quot;https://api.asilu.com/images/baidu/?callback=cb&amp;quot;&amp;gt;请求 https://api.asilu.com/images/baidu/">
+<meta property="og:description" content="为了克服跨域问题，利用没有跨域限制的 script 标签动态加载，将响应数据作为参数传递给预设的 callback 函数。&amp;lt;script src=&amp;quot;https://api.asilu.com/images/baidu/?callback=cb&amp;quot;&amp;gt;请求 https://api.asilu.com/images/baidu/ ，将返回的数据 d">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-05-09T12:51:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSONP 的原理">
-<meta name="twitter:description" content="JSONP 的原理为了克服跨域问题，利用没有跨域限制的 script 标签动态加载，将响应数据作为参数传递给预设的 callback 函数。&amp;lt;script src=&amp;quot;https://api.asilu.com/images/baidu/?callback=cb&amp;quot;&amp;gt;请求 https://api.asilu.com/images/baidu/">
+<meta name="twitter:description" content="为了克服跨域问题，利用没有跨域限制的 script 标签动态加载，将响应数据作为参数传递给预设的 callback 函数。&amp;lt;script src=&amp;quot;https://api.asilu.com/images/baidu/?callback=cb&amp;quot;&amp;gt;请求 https://api.asilu.com/images/baidu/ ，将返回的数据 d">
 
 
 
@@ -424,12 +424,13 @@
 
       
         <div class="note success">
-            <h1 id="JSONP-的原理"><a href="#JSONP-的原理" class="headerlink" title="JSONP 的原理"></a>JSONP 的原理</h1><ul><li>为了克服跨域问题，利用没有跨域限制的 <code>script</code> 标签动态加载，将响应数据作为参数传递给预设的 <code>callback</code> 函数。</li><li><code>&lt;script src=&quot;https://api.asilu.com/images/baidu/?callback=cb&quot;&gt;</code><blockquote><p>请求 <code>https://api.asilu.com/images/baidu/</code> ，将返回的数据 <code>data</code> ，作为参数传给函数 <code>cb</code>，再将 <code>cb(data)</code> 传回。</p></blockquote></li></ul>
+            <ul><li>为了克服跨域问题，利用没有跨域限制的 <code>script</code> 标签动态加载，将响应数据作为参数传递给预设的 <code>callback</code> 函数。</li><li><code>&lt;script src=&quot;https://api.asilu.com/images/baidu/?callback=cb&quot;&gt;</code><blockquote><p>请求 <code>https://api.asilu.com/images/baidu/</code> ，将返回的数据 <code>data</code> ，作为参数传给函数 <code>cb</code>，再将 <code>cb(data)</code> 传回。</p></blockquote></li></ul>
           </div>
 <a id="more"></a>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">// show 函数可以忽略 纯粹展示效果</span></span><br><span class="line">    <span class="keyword">var</span> show = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> images = data.list</span><br><span class="line">        <span class="keyword">let</span> template = <span class="string">''</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; images.length; i++) &#123;</span><br><span class="line">            <span class="comment">// res.list[0].large</span></span><br><span class="line">            <span class="keyword">let</span> large = images[i].image</span><br><span class="line">            <span class="comment">// console.log(large)</span></span><br><span class="line">            template += <span class="string">`&lt;img src="<span class="subst">$&#123;large&#125;</span>"\n&gt;`</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> result = <span class="built_in">document</span>.querySelector(<span class="string">'body'</span>)</span><br><span class="line">        result.innerHTML = template</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 回调函数 函数名称要与 callback=的字符串一致</span></span><br><span class="line">    <span class="keyword">var</span> cb = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(data)</span><br><span class="line">        show(data)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> url = <span class="string">'https://api.asilu.com/images/baidu/'</span></span><br><span class="line">    <span class="keyword">var</span> s = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>)</span><br><span class="line">    s.src = <span class="string">`<span class="subst">$&#123;url&#125;</span>?callback=cb`</span></span><br><span class="line">    <span class="comment">// 动态创建 script 标签</span></span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(s)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>参考资料</li>
+<li><a href="http://api.asilu.com/#image-baidu" target="_blank" rel="noopener">在线 JSONP 接口测试</a></li>
 <li><a href="https://segmentfault.com/a/1190000012469713?utm_medium=referral&amp;utm_source=tuicool" target="_blank" rel="noopener">ajax跨域，这应该是最全的解决方案了</a></li>
 <li><a href="http://www.ruanyifeng.com/blog/2016/04/cors.html" target="_blank" rel="noopener">跨域资源共享 CORS 详解</a></li>
 <li><a href="http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html" target="_blank" rel="noopener">浏览器同源政策及其规避方法</a></li>
@@ -516,17 +517,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -637,23 +629,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JSONP-的原理"><span class="nav-number">1.</span> <span class="nav-text">JSONP 的原理</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       

@@ -424,7 +424,7 @@
       
         
           <div class="note success">
-            <h1 id="JSONP-的原理"><a href="#JSONP-的原理" class="headerlink" title="JSONP 的原理"></a>JSONP 的原理</h1><ul><li>为了克服跨域问题，利用没有跨域限制的 <code>script</code> 标签动态加载，将响应数据作为参数传递给预设的 <code>callback</code> 函数。</li><li><code>&lt;script src=&quot;https://api.asilu.com/images/baidu/?callback=cb&quot;&gt;</code><blockquote><p>请求 <code>https://api.asilu.com/images/baidu/</code> ，将返回的数据 <code>data</code> ，作为参数传给函数 <code>cb</code>，再将 <code>cb(data)</code> 传回。</p></blockquote></li></ul>
+            <ul><li>为了克服跨域问题，利用没有跨域限制的 <code>script</code> 标签动态加载，将响应数据作为参数传递给预设的 <code>callback</code> 函数。</li><li><code>&lt;script src=&quot;https://api.asilu.com/images/baidu/?callback=cb&quot;&gt;</code><blockquote><p>请求 <code>https://api.asilu.com/images/baidu/</code> ，将返回的数据 <code>data</code> ，作为参数传给函数 <code>cb</code>，再将 <code>cb(data)</code> 传回。</p></blockquote></li></ul>
           </div>
           <!--noindex-->
           
